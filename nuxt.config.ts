@@ -2,6 +2,10 @@
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineNuxtConfig({
+  ssr: false,
+  app: {
+    baseURL: '/kteq-nuxt/'
+  },
   css: ['public/assets/css/style.css'],
   vite:{
     plugins: [
