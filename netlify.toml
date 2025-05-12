@@ -6,5 +6,7 @@
   directory = "netlify/functions"
 
 [edge_functions]
+  [[edge_functions]]
   path = "/proxy-stream"
   function = "proxyStream"
+
