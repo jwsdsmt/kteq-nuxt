@@ -1,22 +1,17 @@
-// export default async (request) => {
-//   const streamUrl = 'http://kteq-streamer.sdsmt.edu:8000/kteq_high.m3u'
+const fetch = require('node-fetch');
 
-//   const res = await fetch(streamUrl)
-//   const body = await res.text()
+exports.handler = async function (event, context) {
+  const streamUrl = 'http://kteq-streamer.sdsmt.edu:8000/kteq_high.m3u';
 
-//   return new Response(body, {
-//     headers: {
-//       'content-type': 'audio/x-mpegurl',
-//       'access-control-allow-origin': '*',
-//     },
-//   })
-// }
+  const res = await fetch(streamUrl);
+  const body = await res.text();
 
-export default async (request) => {
-  return new Response("Hello from the proxy!", {
+  return {
+    statusCode: 200,
     headers: {
-      'content-type': 'text/plain',
+      'content-type': 'audio/x-mpegurl',
+      'access-control-allow-origin': '*',
     },
-  });
+    body,
+  };
 };
-
