@@ -1,0 +1,10 @@
+[build]
+  command = "npm run generate"
+  publish = ".output/public"
+
+[functions]
+  directory = "netlify/functions"
+
+[edge_functions]
+  path = "/proxy-stream"
+  function = "proxyStream"

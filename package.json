@@ -11,12 +11,12 @@
     "deploy": "nuxt generate && gh-pages -d .output/public"
   },
   "dependencies": {
-    "nuxt": "^3.17.2",
     "typescript": "^5.8.3",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "nuxt": "^3.17.2",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
