@@ -27,7 +27,7 @@
   <script setup>
   import { ref, onMounted } from 'vue';
   
-  const streamUrl = 'http://kteq-streamer.sdsmt.edu:8000/kteq_high';
+  const streamUrl = '/.netlify/functions/proxyStream';
   const isPlaying = ref(false);
   const volume = ref(0.8);
   const player = ref(null);
