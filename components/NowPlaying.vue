@@ -27,7 +27,7 @@
   <script setup>
   import { ref, onMounted } from 'vue';
   
-  const streamUrl = '/.netlify/functions/proxyStream';
+  const streamUrl = 'https://kteq-proxy.kteq.workers.dev';
   const isPlaying = ref(false);
   const volume = ref(0.8);
   const player = ref(null);
