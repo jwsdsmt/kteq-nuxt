@@ -4,13 +4,17 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineNuxtConfig({
   ssr: false,
+  nitro: {
+    preset: 'netlify-static'
+  },
   app: {
     baseURL: '/'
   },
   css: ['public/assets/css/style.css'],
   vite: {
-    plugins: [tsconfigPaths()]
+    plugins: []
   },
   devtools: { enabled: true },
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2024-11-01'
 })
+
